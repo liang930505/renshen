@@ -7,7 +7,6 @@ import tensorflow as tf
 import keras.backend.tensorflow_backend as KTF
 from keras import Sequential
 import datetime
-import threading
 import shutil
 
 KTF.set_session(tf.Session(config=tf.ConfigProto(device_count={'gpu': 0})))
@@ -101,19 +100,6 @@ if __name__ == '__main__':
     start = datetime.datetime.now()
     # 图片所在路径
     path = '/home/gszn/'
-    # path1 = '/home/gszn/1/'
-    # path2 = '/home/gszn/2/'
-    # path3 = '/home/gszn/3/'
-    # t1 = threading.Thread(target=img_read, args=path1)
-    # threads.append(t1)
-    # t2 = threading.Thread(target=img_read, args=path2)
-    # threads.append(t2)
-    # t3 = threading.Thread(target=img_read, args=path3)
-    # threads.append(t3)
-    # for t in threads:
-    #     t.setDaemon(True)
-    #     t.start()
-
     # 载入图像
     img, name_list = img_read(path)
     pic_end = datetime.datetime.now()
