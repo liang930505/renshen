@@ -92,7 +92,6 @@ def predict(x_test, model):
             shutil.move(path + name_list[j], '/home/gszn/small/')
     print(y_pred)
 
-
 # 程序入口
 
 if __name__ == '__main__':
